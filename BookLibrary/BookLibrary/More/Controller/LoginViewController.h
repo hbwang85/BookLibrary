@@ -1,5 +1,5 @@
 //
-//  SecondViewController.h
+//  LoginViewController.h
 //  BookLibrary
 //
 //  Created by Haibin Wang on 3/31/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SecondViewController : UIViewController
-
+@interface LoginViewController : UIViewController
 
 @end
-
