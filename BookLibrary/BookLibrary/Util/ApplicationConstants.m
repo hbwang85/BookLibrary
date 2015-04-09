@@ -8,6 +8,8 @@
 
 @implementation ApplicationConstants
 NSString *const kBaseURL = @"http://localhost:3000";
+NSString *const kServiceName = @"BookLibrary";
+NSString *const kUserID = @"userID";
 
 
 @end

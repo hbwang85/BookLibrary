@@ -8,6 +8,8 @@
 
 @interface ApplicationConstants : NSObject
 extern NSString *const kBaseURL;
+extern NSString *const kServiceName;
+extern NSString *const kUserID;
 
 
 @end

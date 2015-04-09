@@ -29,7 +29,7 @@
     [[UserManager sharedInstance] registerWithMail:_mailField.text
                                             passwd:_passwdField.text
                                            success:^(User *user) {
-                                               [self.navigationController popToRootViewControllerAnimated:YES];
+                                               [weakSelf.navigationController popToRootViewControllerAnimated:YES];
                                            } failure:^(NSError *error) {
 
             }];

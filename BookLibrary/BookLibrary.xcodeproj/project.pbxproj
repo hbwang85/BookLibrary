@@ -18,11 +18,13 @@
 		A374C95A1ACA8C2700908B1F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A374C9591ACA8C2700908B1F /* Images.xcassets */; };
 		A374C95D1ACA8C2700908B1F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A374C95B1ACA8C2700908B1F /* LaunchScreen.xib */; };
 		A374C9691ACA8C2700908B1F /* BookLibraryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A374C9681ACA8C2700908B1F /* BookLibraryTests.m */; };
+		A3CD7C031AD274EE00403968 /* bookLib.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A3CD7C011AD274EE00403968 /* bookLib.xcdatamodeld */; };
+		A3CD7C051AD278FB00403968 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3CD7C041AD278FB00403968 /* CoreData.framework */; };
+		A3CD7C0B1AD2BAEA00403968 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = A3CD7C0A1AD2BAEA00403968 /* User.m */; };
 		B714927B8594FFB9508B45D0 /* log-out-user.png in Resources */ = {isa = PBXBuildFile; fileRef = B714994C34928FCB75DA1376 /* log-out-user.png */; };
 		B714996E058E3975263C4746 /* log-in-user.png in Resources */ = {isa = PBXBuildFile; fileRef = B714985B390A9C681BD4AD8A /* log-in-user.png */; };
 		B7149A1EBC6317F82759E770 /* ApplicationConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = B7149571EEBFD9C4E93FF5EC /* ApplicationConstants.m */; };
 		B7149A9C577F038CF610E53E /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B7149B19112FAE56F814D4BB /* UserManager.m */; };
-		B7149E310470914D3EFBE7D8 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B714987C276452A115D5B5D1 /* User.m */; };
 		B7149E9DAB73D70999F51F41 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B7149EBC12F0AE82F7E8A313 /* AppDelegate.m */; };
 		B7149ECB38BC9BCCECD3F00D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B7149A4D0E78DFA797BA3D05 /* main.m */; };
 		B7149FCF54B3A5DF58220544 /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = B714918251A169D67809AD50 /* Account.m */; };
@@ -63,19 +65,21 @@
 		A374C9621ACA8C2700908B1F /* BookLibraryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookLibraryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A374C9671ACA8C2700908B1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A374C9681ACA8C2700908B1F /* BookLibraryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookLibraryTests.m; sourceTree = "<group>"; };
+		A3CD7C021AD274EE00403968 /* bookLib.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = bookLib.xcdatamodel; sourceTree = "<group>"; };
+		A3CD7C041AD278FB00403968 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		A3CD7C091AD2BAEA00403968 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		A3CD7C0A1AD2BAEA00403968 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		B714918251A169D67809AD50 /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account.m; sourceTree = "<group>"; };
 		B71494AB742710A3526E3A1A /* ApplicationConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplicationConstants.h; sourceTree = "<group>"; };
 		B7149571EEBFD9C4E93FF5EC /* ApplicationConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicationConstants.m; sourceTree = "<group>"; };
 		B714985B390A9C681BD4AD8A /* log-in-user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "log-in-user.png"; sourceTree = "<group>"; };
 		B71498670F93527B9E1DD517 /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
-		B714987C276452A115D5B5D1 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		B714994C34928FCB75DA1376 /* log-out-user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "log-out-user.png"; sourceTree = "<group>"; };
 		B71499B57A03E5A4FAC073D9 /* UserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserManager.h; sourceTree = "<group>"; };
 		B7149A3C1D19FB72081AAAD4 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B7149A4D0E78DFA797BA3D05 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B7149B19112FAE56F814D4BB /* UserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserManager.m; sourceTree = "<group>"; };
 		B7149DF5C64C37A2B33E2A81 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
-		B7149E26F26611634CDA0CFB /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		B7149EBC12F0AE82F7E8A313 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3CD7C051AD278FB00403968 /* CoreData.framework in Frameworks */,
 				BEDDC6C925ECE16888F8C02D /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -101,6 +106,7 @@
 		4A8BB4B53390BE9AEA708CA8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A3CD7C041AD278FB00403968 /* CoreData.framework */,
 				0F28C332318B82B33A78A569 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -229,6 +235,7 @@
 		B714987D3781D0899DE5657B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A3CD7C011AD274EE00403968 /* bookLib.xcdatamodeld */,
 				A374C9591ACA8C2700908B1F /* Images.xcassets */,
 				B7149A3C1D19FB72081AAAD4 /* AppDelegate.h */,
 				B7149EBC12F0AE82F7E8A313 /* AppDelegate.m */,
@@ -246,8 +253,8 @@
 			children = (
 				B714918251A169D67809AD50 /* Account.m */,
 				B71498670F93527B9E1DD517 /* Account.h */,
-				B714987C276452A115D5B5D1 /* User.m */,
-				B7149E26F26611634CDA0CFB /* User.h */,
+				A3CD7C091AD2BAEA00403968 /* User.h */,
+				A3CD7C0A1AD2BAEA00403968 /* User.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -399,6 +406,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3CD7C0B1AD2BAEA00403968 /* User.m in Sources */,
 				A37310EB1ACE02EA005ACA5F /* BLMoreViewController.m in Sources */,
 				A374C9521ACA8C2700908B1F /* FirstViewController.m in Sources */,
 				B7149A9C577F038CF610E53E /* UserManager.m in Sources */,
@@ -409,8 +417,8 @@
 				A37310E31ACD84FE005ACA5F /* LoginViewController.m in Sources */,
 				B7149ECB38BC9BCCECD3F00D /* main.m in Sources */,
 				B7149FCF54B3A5DF58220544 /* Account.m in Sources */,
-				B7149E310470914D3EFBE7D8 /* User.m in Sources */,
 				A37310EE1ACE0862005ACA5F /* UserOtherInfoCell.m in Sources */,
+				A3CD7C031AD274EE00403968 /* bookLib.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -621,6 +629,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A3CD7C011AD274EE00403968 /* bookLib.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A3CD7C021AD274EE00403968 /* bookLib.xcdatamodel */,
+			);
+			currentVersion = A3CD7C021AD274EE00403968 /* bookLib.xcdatamodel */;
+			path = bookLib.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A374C93E1ACA8C2700908B1F /* Project object */;
 }

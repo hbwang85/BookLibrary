@@ -30,11 +30,12 @@
     self.clearsSelectionOnViewWillAppear = YES;
     UserInfoCell *cell = (UserInfoCell *)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
     UserOtherInfoCell *otherInfoCell = (UserOtherInfoCell *)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0]];
-    User *user = [UserManager sharedInstance].currentUser;
-    if (user) {
+    User *user = nil; //[[UserManager sharedInstance] currentUser];
+    
+    if (user && user.user_id) {
         [cell switchToLoginState:user];
-        otherInfoCell.bookCount.text = user.book_count;
-        otherInfoCell.colleagueCount.text = user.friend_count;
+//        otherInfoCell.bookCount.text = user.book_count;
+//        otherInfoCell.colleagueCount.text = user.friend_count;
     } else {
         [cell switchToLogoutState];
         otherInfoCell.bookCount.text = @"--";
@@ -71,7 +72,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 
     if (indexPath.section==0 && indexPath.row==0) {
-        if (![UserManager sharedInstance].currentUser) {
+        if (1/*![UserManager sharedInstance].currentUser*/) {
             UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
             LoginViewController *vc = (LoginViewController *) [sb instantiateInitialViewController];
             [self.navigationController pushViewController:vc animated:YES];

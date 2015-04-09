@@ -10,7 +10,7 @@
 
 @interface UserManager : NSObject
 
-@property (nonatomic, strong, readonly) User *currentUser;
+//@property (nonatomic, strong, readonly) User *currentUser;
 
 
 + (instancetype)sharedInstance;
@@ -20,5 +20,9 @@
 - (void)registerWithMail:(NSString *)mail passwd:(NSString *)passwd success:(void(^)(User *user))successBlock failure:(void(^)(NSError *error))failureBlock;
 
 - (void)loginWithMail:(NSString *)mail passwd:(NSString *)passwd success:(void(^)(User *user))successBlock failure:(void(^)(NSError *error))failureBlock;
+
+- (void)saveCurrentUser:(User *)user;
+
+- (User *)currentUser;
 
 @end
