@@ -30,7 +30,7 @@
     self.clearsSelectionOnViewWillAppear = YES;
     UserInfoCell *cell = (UserInfoCell *)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
     UserOtherInfoCell *otherInfoCell = (UserOtherInfoCell *)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0]];
-    User *user = nil; //[[UserManager sharedInstance] currentUser];
+    User *user = [[UserManager sharedInstance] currentUser];
     
     if (user && user.user_id) {
         [cell switchToLoginState:user];
