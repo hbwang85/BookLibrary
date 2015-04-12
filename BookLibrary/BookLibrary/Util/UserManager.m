@@ -19,7 +19,6 @@
 
 @property (nonatomic, strong) RKObjectManager *userObjectManager;
 @property (nonatomic, strong) User *currentUser;
-
 @end
 
 
@@ -73,8 +72,6 @@
     Account *account = [Account new];
     account.mail = @"1@51.com";
     account.passwd = @"111111";
-
-    __weak typeof(self) weakSelf = self;
 
     [_userObjectManager postObject:account
                               path:@"/login"
@@ -134,9 +131,9 @@
 - (void)saveLoginUserID:(User *)user {
     [[NSUserDefaults standardUserDefaults] setValue:user.user_id forKey:kUserID];
     [[NSUserDefaults standardUserDefaults] synchronize];
+
+    [self clearOtherUsers];
 }
-
-
 
 - (User *)currentUser{
     NSString *userID = [[NSUserDefaults standardUserDefaults] stringForKey:kUserID];
@@ -169,6 +166,33 @@
     return user;
 }
 
+- (void)clearOtherUsers{
+    NSManagedObjectContext *managedObjectContext = self.userObjectManager.managedObjectStore.persistentStoreManagedObjectContext;
+
+    NSFetchRequest *fetchRequest = [NSFetchRequest new];
+    NSEntityDescription *description = [NSEntityDescription entityForName:@"User"
+                                                   inManagedObjectContext:managedObjectContext];
+    fetchRequest.entity = description;
+
+    NSArray *array = [managedObjectContext executeFetchRequest:fetchRequest
+                                                         error:nil];
+
+    NSString *userID = [[NSUserDefaults standardUserDefaults] stringForKey:kUserID];
+    [array enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        User *user = (User *)obj;
+        if (![user.user_id isEqualToString:userID]) {
+            [managedObjectContext deleteObject:user];
+        }
+    }];
+
+    NSError *error = nil;
+    if (![managedObjectContext save:&error]) {
+        NSLog(@"error:%@", [error localizedDescription]);
+    }
+
+
+}
+
 
 // Returns the URL to the application's Documents directory.
 - (NSURL *)applicationDocumentsDirectory {
@@ -176,7 +200,5 @@
     NSLog(@"%@", [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject]);
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
-
-
 
 @end
